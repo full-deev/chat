@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat grupal rápido</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Chat en vivo</h1>
+  <input id="mensaje" autocomplete="off" />
+  <button onclick="enviarMensaje()">Enviar</button>
+  <div id="chat"></div>
+
+  <script>
+    const socket = io();
+
+    function enviarMensaje() {
+      const mensaje = document.getElementById("mensaje").value;
+      socket.emit("chat message", mensaje);
+      document.getElementById("mensaje").value = '';
+    }
+
+    socket.on("chat message", (msg) => {
+      const chat = document.getElementById("chat");
+      chat.innerHTML += `<p>${msg}</p>`;
+    });
+  </script>
+</body>
+</html>
