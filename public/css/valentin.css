@@ -1,3 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Monda:wght@400..700&display=swap');
+
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FF8A80;  /* Rojo claro o pastel, ahora como primario */
+    --secundario: #D32F2F; /* Rojo más oscuro e intenso, ahora como secundario */
+    --gris: #757575;
+    --rosa-claro: #FFCDD2; /* Rosa suave */
+    --dorado: #FFD700;     /* Detalles dorados para un toque de lujo */
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.7rem;
+    font-family: 'Monda', serif;
+    background-color: var(--rosa-claro);  /* Fondo suave de rosa claro */
+    margin: 0;
+    padding: 0;
+    color: var(--oscuro);
+}
+
+/* Titulo y encabezado */
+.titulo {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--secundario);
+    margin-top: 2rem;
+}
+
+.titulo a {
+    text-decoration: none;
+    color: var(--secundario);
+}
+
+.titulo a:hover {
+    color: var(--primario);
+}
+
+/* Navegación */
+.nav-bg {
+    background-color: var(--secundario);
+    padding: 1rem 0;
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--blanco);
+    border-radius: 1rem;
+}
+
+/* Contenido */
+.contenido {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+#palabraForm input {
+    padding: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--primario);
+    background-color: var(--rosa-claro);
+    color: var(--oscuro);
+}
+
+#palabraForm button {
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#palabraForm button:hover {
+    background-color: var(--primario);
+}
+
+/* Mensajes y resultados */
+#mensajeContenedor p {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    color: var(--secundario);
+}
+
+.imagen {
+    margin: 1rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.imagen:hover {
+    transform: scale(1.05);
+}
+
+.imagen.aparecer {
+    opacity: 1;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+
+.none {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.none:hover {
+    color: var(--primario);
+}
+/* REDES SOCIALES */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 3rem;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--primario); /* Cambia el color al pasar el mouse */
+}
+
 .chat-popup {
     position: fixed;
     bottom: 20px;
