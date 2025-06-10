@@ -1,6 +1,21 @@
 {
   "name": "chat-ratona",
   "version": "1.0.0",
+  "license": "MIT",
+  "description": "Chat emergente para San Valentín",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
+
+{
+  "name": "chat-ratona",
+  "version": "1.0.0",
   "description": "Chat emergente para San Valentín",
   "main": "server.js",
   "scripts": {
