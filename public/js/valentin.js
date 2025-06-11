@@ -27,13 +27,6 @@ document.getElementById('palabraForm').addEventListener('submit', function(event
         setTimeout(() => {
             pedirNombreYMostrarChat(); // Mostrar chat luego de imágenes
         }, 500);
-    } else if (palabraInput === 'chocolates') {
-        mensajeContenedor.innerHTML = '<p>¡Feliz San Valentín, Brii! 🌍💌 El amor no tiene fronteras y el corazón siempre encuentra su camino. Que este día esté lleno de felicidad y magia romántica.</p>';
-
-        const imagen1 = crearImagen('extra/uno.jpg', 'Imagen Uno', null, '550px');
-        const imagen2 = crearImagen('extra/dos.jpg', 'Imagen Dos', '400px', '550px');
-
-        imagenContenedor.append(imagen1, imagen2);
     } else {
         mensajeContenedor.innerHTML = '<p>¡Feliz San Valentín! 💖 No importa lo que digas, lo importante es celebrar la amistad que nos une. ¡Que tengas un día lleno de cariño y alegría! Besoooos ♥</p>';
 
